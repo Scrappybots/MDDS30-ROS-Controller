@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package>
+  <name>mdds30_controller</name>
+  <version>0.0.1</version>
+  <description>
+    This package is the interface with the Cytron SmartDriveDuo-30 MDDS30 motor controller.
+  </description>
+
+  <maintainer email="bryanribas@gmail.com">Bryan Ribas</maintainer>
+
+  <author email="bryanribas@gmail.com">Bryan Ribas</author>
+
+  <license>CC BY-SA 4.0</license>
+
+  <url type="website">http://www.r1b4z01d.com/</url>
+  <author>Bryan Ribas</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>std_msgs</run_depend>
+</package>

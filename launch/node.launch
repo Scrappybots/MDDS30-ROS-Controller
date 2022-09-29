@@ -1,0 +1,6 @@
+<launch>
+	<arg name="port" default="/dev/ttyUSB0" />
+	<node pkg="mdds30_controller" type="mdds30_controller.py" name="mdds30_controller" output="screen">
+		<param name="port" value="$(arg port)" />
+	</node>
+</launch>
