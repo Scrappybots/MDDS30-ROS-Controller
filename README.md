@@ -49,7 +49,7 @@ The dips switches on the MDDS30 should match the following for connecting with a
 
 ![dipswitch](https://user-images.githubusercontent.com/3535710/193176624-9a9f3896-a6ad-4569-9c4d-40d4cf9d798a.png)
 
-If you want to use another baudrate use the following to determin what switchs to flip:
+If you want to use another baudrate use the following to determin what switches to flip:
 
 ![other options](https://user-images.githubusercontent.com/3535710/193176898-bc102955-00d3-41d2-9246-97929ccf0183.png)
 
