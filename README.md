@@ -72,15 +72,6 @@ $ catkin build
 #or
 $ catkin_make
 
-# Source the workspace bash file
-$ source ~/catkin_ws/devel/setup.bash
-
-# Run the node
-$ roslaunch mdds30_controller node.launch port:=/dev/ttyUSB0
- 
-# publish -100 to 100 to one of the two topics:
-/MDDS30_controller/motor_left
-/MDDS30_controller/motor_Right
 ```
 
 
@@ -94,7 +85,9 @@ $ source ~/catkin_ws/devel/setup.bash
 # Run the node
 $ roslaunch mdds30_controller node.launch port:=/dev/ttyUSB0
  
-# 
+# publish -100 to 100 to one of the two topics:
+/MDDS30_controller/motor_left
+/MDDS30_controller/motor_Right
 ```
 ## :memo: License ##
 
