@@ -40,8 +40,20 @@ This is a ROS node to allow easy integration with the Cytron MDDS30 SmartDriveDu
 :heavy_check_mark: 2 wire connection;
 
 ## :white_check_mark: Wiring ##
+The MDDS30 only needs two wires connected to the host device. One is the ground and the other is the TX of the host should connect to the IN1 of the MDDS30 This is the example for a Jetson Nano.
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+![Screenshot from 2022-09-29 21-30-04](https://user-images.githubusercontent.com/3535710/193180211-cb1f48a3-3c1e-4c58-82ff-066d18714961.jpg)
+
+
+The dips switches on the MDDS30 should match the following for connecting with a baudrate of 9600bps.
+
+![dipswitch](https://user-images.githubusercontent.com/3535710/193176624-9a9f3896-a6ad-4569-9c4d-40d4cf9d798a.png)
+
+If you want to use another baudrate use the following to determin what switchest to flip:
+
+![other options](https://user-images.githubusercontent.com/3535710/193176898-bc102955-00d3-41d2-9246-97929ccf0183.png)
+
+
 
 ## :checkered_flag: Setup ##
 
