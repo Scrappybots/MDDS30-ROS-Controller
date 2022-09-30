@@ -20,13 +20,13 @@
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
   <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-wiring">Wiring</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-setup">Setup</a> &#xa0; | &#xa0;
+  <a href="#zap-wiring">Wiring</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-setup">Setup</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-run-node">Run Node</a> &#xa0; | &#xa0;
   <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">Author</a>
+  <a href="https://github.com/r1b4z01d" target="_blank">Author</a>
 </p>
-
+b4z01d
 <br>
 
 ## :dart: About ##
@@ -39,7 +39,7 @@ This is a ROS node to allow easy integration with the Cytron MDDS30 SmartDriveDu
 :heavy_check_mark: Forward and Reverse;\
 :heavy_check_mark: 2 wire connection;
 
-## :white_check_mark: Wiring ##
+## :zap: Wiring ##
 The MDDS30 only needs two wires connected to the host device. One is the ground and the other is the TX of the host should connect to the IN1 of the MDDS30 This is the example for a Jetson Nano.
 
 ![Screenshot from 2022-09-29 21-30-04](https://user-images.githubusercontent.com/3535710/193180211-cb1f48a3-3c1e-4c58-82ff-066d18714961.jpg)
@@ -55,7 +55,7 @@ If you want to use another baudrate use the following to determin what switchest
 
 
 
-## :checkered_flag: Setup ##
+## :white_check_mark: Setup ##
 
 ```bash
 # CD to workspace src folder
