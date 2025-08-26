@@ -42,7 +42,15 @@ This is a ROS2 node to allow easy integration with the [Cytron MDDS30 SmartDrive
 :heavy_check_mark: 2 wire connection;
 
 ## :zap: Wiring ##
-The MDDS30 only needs two wires connected to the host device. One is the ground and the other is the TX of the host should connect to the IN1 of the MDDS30 This is the example for a Jetson Nano.
+The MDDS30 only needs two wires connected to the host device. One is the ground and the other is the TX of the host should connect to the IN1 of the MDDS30.
+
+### For NVIDIA Jetson Orin Nano:
+- Connect GND to GND
+- Connect UART TX (Pin 8, /dev/ttyTHS0) to MDDS30 IN1
+
+### For other Jetson devices:
+- Jetson Nano: Use /dev/ttyTHS1 (Pin 8)
+- Generic USB-Serial: Use /dev/ttyUSB0
 
 ![Screenshot from 2022-09-29 21-30-04](https://user-images.githubusercontent.com/3535710/193180211-cb1f48a3-3c1e-4c58-82ff-066d18714961.jpg)
 
@@ -60,20 +68,23 @@ If you want to use another baudrate use the following to determin what switches 
 ## :white_check_mark: Setup ##
 
 ```bash
+# Install Python dependencies
+$ pip install pyserial
+
 # CD to workspace src folder
-$ cd $/catkin_ws/src 
+$ cd ~/ros2_ws/src 
 
 # Clone this project
-$ git clone https://github.com/r1b4z01d/MDDS30-ROS-Controller
+$ git clone https://github.com/Scrappybots/MDDS30-ROS-Controller
 
-# Drop back down
-$ cd ..
+# Drop back to workspace root
+$ cd ~/ros2_ws
 
-# Install dependencies
-$ catkin build
-#or
-$ catkin_make
+# Build with colcon
+$ colcon build --packages-select mdds30_controller
 
+# Source the workspace
+$ source install/setup.bash
 ```
 
 
@@ -82,15 +93,29 @@ $ catkin_make
 
 ```bash
 # Source the workspace bash file
-$ source ~/catkin_ws/devel/setup.bash
+$ source ~/ros2_ws/install/setup.bash
 
-# Run the node
-$ roslaunch mdds30_controller node.launch port:=/dev/ttyUSB0
+# Run the node with default Jetson Orin Nano port (/dev/ttyTHS0)
+$ ros2 run mdds30_controller mdds30_controller
+
+# Or run with custom port
+$ ros2 run mdds30_controller mdds30_controller --ros-args -p port:=/dev/ttyUSB0
+
+# Or use launch file
+$ ros2 launch mdds30_controller node_launch.py
+
+# Or launch with custom port
+$ ros2 launch mdds30_controller node_launch.py port:=/dev/ttyUSB0
  
-# publish -100 to 100 to one of the two topics:
-/MDDS30_controller/motor_left
-/MDDS30_controller/motor_Right
+# Publish -100 to 100 to one of the two topics:
+# ros2 topic pub /MDDS30_controller/motor_left std_msgs/msg/Int16 "data: 50"
+# ros2 topic pub /MDDS30_controller/motor_right std_msgs/msg/Int16 "data: -30"
 ```
+
+### Jetson Orin Nano Serial Port Notes:
+- Default port: `/dev/ttyTHS0` (UART1)
+- Make sure UART is enabled in device tree
+- Check permissions: `sudo chmod 666 /dev/ttyTHS0`
 ## :memo: License ##
 
 This project is released under CC BY-SA 4.0 license. For more details read this: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
