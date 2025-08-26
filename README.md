@@ -113,9 +113,9 @@ $ ros2 launch mdds30_controller node_launch.py port:=/dev/ttyUSB0
 ```
 
 ### Jetson Orin Nano Serial Port Notes:
-- Default port: `/dev/ttyTHS0` (UART1)
+- Default port: `/dev/ttyTHS1` (UART1)
 - Make sure UART is enabled in device tree
-- Check permissions: `sudo chmod 666 /dev/ttyTHS0`
+- Check permissions: `sudo chmod 666 /dev/ttyTHS1`
 ## :memo: License ##
 
 This project is released under CC BY-SA 4.0 license. For more details read this: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
