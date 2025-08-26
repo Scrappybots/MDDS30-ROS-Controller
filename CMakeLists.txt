@@ -21,8 +21,9 @@ ament_python_install_package(${PROJECT_NAME})
 
 # Install Python executables
 install(PROGRAMS
-  src/mdds30_controller.py
+  mdds30_controller/mdds30_controller.py
   DESTINATION lib/${PROJECT_NAME}
+  RENAME mdds30_controller
 )
 
 # Install launch files
