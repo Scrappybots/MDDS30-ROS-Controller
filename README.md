@@ -31,7 +31,9 @@ b4z01d
 
 ## :dart: About ##
 
-This is a ROS node to allow easy integration with the [Cytron MDDS30 SmartDriveDuo-30 motor controller](https://www.cytron.io/p-30amp-7v-35v-smartdrive-dc-motor-driver-2-channels). This node utilizes the Serial Simplified mode of the MDDS30. Each channel has a topic that accepts -100 (full speed reverse) to 100 (full speed forward).
+This is a ROS2 node to allow easy integration with the [Cytron MDDS30 SmartDriveDuo-30 motor controller](https://www.cytron.io/p-30amp-7v-35v-smartdrive-dc-motor-driver-2-channels). This node utilizes the Serial Simplified mode of the MDDS30. Each channel has a topic that accepts -100 (full speed reverse) to 100 (full speed forward).
+
+**Updated for ROS2 and optimized for NVIDIA Jetson Orin Nano.**
 
 ## :sparkles: Features ##
 

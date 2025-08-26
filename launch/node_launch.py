@@ -5,11 +5,11 @@ from launch_ros.actions import Node
 
 
 def generate_launch_description():
-    # Declare launch arguments
+    # Declare launch arguments - Default port for Jetson Orin Nano
     port_arg = DeclareLaunchArgument(
         'port',
-        default_value='/dev/ttyUSB0',
-        description='Serial port for MDDS30 controller'
+        default_value='/dev/ttyTHS0',
+        description='Serial port for MDDS30 controller (Jetson Orin Nano default: /dev/ttyTHS0)'
     )
 
     # Create the node

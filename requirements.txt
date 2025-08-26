@@ -1,0 +1,14 @@
+# Python dependencies for MDDS30-ROS-Controller
+# Serial communication library
+pyserial>=3.4
+
+# ROS2 Python client library (usually installed with ROS2)
+# rclpy  # This is typically installed with ROS2 distribution
+
+# Standard message types (usually installed with ROS2)
+# std_msgs  # This is typically installed with ROS2 distribution
+
+# Optional: For development and testing
+# pytest>=6.0  # For running tests
+# flake8>=3.8  # For code linting
+# black>=21.0  # For code formatting
